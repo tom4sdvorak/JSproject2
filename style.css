@@ -1,5 +1,5 @@
 body {
-    background-color: #272829;
+    background-color: black;
     color: #FFF6E0;
     font-family: Helvetica;
     display: flex;
@@ -17,6 +17,7 @@ body {
 
 #selectionContainer h1 {
     font-size: 2em;
+    color: gold;
 }
 
 #selectionContainer {
@@ -24,50 +25,75 @@ body {
 }
 
 #selectionContainer select {
-    font-size: 1em;
+    font-size: 0.8em;
+    border: none;
+    height: 2em;
+    padding: 0 0.5em 0 0.5em;
+    margin: 0 0.5em 0 0.5em;
+}
+
+#selectionContainer select:focus-visible {
+    outline: none;
 }
 
 
 #date {
     text-align: center;
     color: gold;
-    border-width: 0.1em 0 0 0;
     border-style: solid;
     border-color: gold;
+    border-width: medium 0 0 0;
     padding-top: 1em;;
 }
 #movieSelection {
     display: flex;
     flex-wrap: wrap;
-    padding: 1em 0 1em 0;
     justify-content: center;
 }
 
 .movie {
-    background-color: #61677A;
+    background-color: #272829;
     display: flex;
     width: max(24em, 25%);
-    border-radius: 5px;
+    /* border-radius: 5px; */
     border: 2px solid gold;
     margin: 1em;
     justify-content: center;
-}
-
-.movie img {
-    height: 12em;
-    width: auto;
     padding: 1em;
 }
 
-.movie div {
-    margin-left: 1em;
-    flex-grow: 10;
+.moviePic {
+    height: 100%;
+    width: 40%;
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-.movie div>h2 {
+.moviePic>img {
+    width: 100%;
+    height: auto;
+}
+
+.movieInfo {
+    height: 100%;
+    width: 60%;
+    margin-left: 1em;
+}
+
+.movieInfo>h2 {
+    margin-top: 0;
     margin-bottom: 0.1em;
 }
 
-.movie div>h4 {
+.movieInfo>h4 {
     margin-top: 0;
+}
+
+#footer {
+    border-color: gold;
+    border-style: solid;
+    border-width: medium 0 0 0;
+    padding: 1em;
+    text-align: center;
 }
