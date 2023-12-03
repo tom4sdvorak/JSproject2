@@ -1,6 +1,5 @@
 // Load list of cinemas from the API into cinema selector on the main page
 function getCinemas(){
-    console.log("RUnning dgetCinemas");
     var url = "https://www.finnkino.fi/xml/TheatreAreas/";
     var xhttp = new XMLHttpRequest();
     xhttp.open("GET", url, true);
@@ -32,7 +31,6 @@ function getCinemas(){
 
 // Load list of dates the API can be accessed for movies into date selector on the main page
 function getDates(){
-    console.log("RUnning getDates");
     // Get list of available schedule dates from API
     var url = "https://www.finnkino.fi/xml/ScheduleDates/";
     var xhttp = new XMLHttpRequest();
@@ -100,7 +98,7 @@ function displayMovies(){
                     pic.setAttribute("src", x[i].getElementsByTagName("EventMediumImagePortrait")[0].childNodes[0].nodeValue);
                 }
                 else if(x[i].getElementsByTagName("EventLargeImagePortrait").length > 0){
-                    pic.setAttribute("src", x[i].getElementsByTagName("EventMediumImagePortrait")[0].childNodes[0].nodeValue);
+                    pic.setAttribute("src", x[i].getElementsByTagName("EventLargeImagePortrait")[0].childNodes[0].nodeValue);
                 }
                 else{
                     pic.setAttribute("src", x[i].getElementsByTagName("EventSmallImagePortrait")[0].childNodes[0].nodeValue);
